@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'json'
+require 'instapaper'
+
+client = Instapaper.client(YAML.load_file(File.expand_path("~/.instapaper.yml")))
+
+folder_id = ARGV[0]
+
+if folder_id.nil?
+  STDERR.puts("A folder_id is required.")
+  exit 1
+end
+
+filename = ARGV[1] || File.expand_path("~/.instapaper/#{folder_id}.json")
+
+# exit 0 if File.mtime(filname).to_i > (Time.now.to_i - 300)
+
+File.open(filename, 'w') do |f|
+  f.write(JSON.dump(client.bookmarks(folder_id: folder_id)))
+end

@@ -70,6 +70,21 @@ body {
 }
 
 /* line 9, ../application.css.scss */
-h1 {
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+/* line 14, ../application.css.scss */
+.container h1 {
+  margin: 1em 0;
   font-size: 200%;
+}
+/* line 19, ../application.css.scss */
+.container h2 {
+  font-size: 150%;
+}
+/* line 23, ../application.css.scss */
+.container iframe {
+  margin: 1em 0;
+  display: block;
 }

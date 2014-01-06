@@ -6,6 +6,22 @@ body {
   font: 13px "Helvetica";
 }
 
-h1 {
-  font-size: 200%;
+.container {
+  width: 500px;
+  margin: 0 auto;
+  // text-align: center;
+
+  h1 {
+    margin: 1em 0;
+    font-size: 200%;
+  }
+
+  h2 {
+    font-size: 150%;
+  }
+
+  iframe {
+    margin: 1em 0;
+    display: block;
+  }
 }
